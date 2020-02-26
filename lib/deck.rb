@@ -20,7 +20,7 @@ class Deck
   end
 
   def shuffle
-    return @cards.shuffle!
+    @cards.shuffle!
   end
 
 end

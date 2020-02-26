@@ -18,10 +18,9 @@ describe Deck do
   it "can shuffle the deck" do
 
     deck = Deck.new
+    original_cards = deck.cards.dup
+    deck.shuffle
 
-    original_deck = deck.cards
-    shuffled_deck = deck.shuffle
-
-    #expect(original_deck).
+    expect(original_cards[0,5]).wont_equal deck.cards[0,5]
   end
 end
